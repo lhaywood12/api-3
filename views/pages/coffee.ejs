@@ -1,0 +1,21 @@
+<%- include('../partials/header'); %>
+
+<main class="main main-coffee">
+    <h2 class="main-h2"><%= name %></h2>
+    <section class="section section-coffee">
+        <%data.forEach(item => { %>
+        <figure class="figure coffee-figure">
+            <a href="/coffee/<%= item.id %>">
+               <% console.log(item) %>
+               <figcaption class="figcaption"><%= item.title %>
+               </figcaption>
+            </a>
+            <p><%= item.description %></p>
+            <p><%= item.ingredients %></p>
+            <p><%= item.id %></p>
+        </figure>
+        })
+    </section>
+</main>
+
+<%- include('../partials/footer'); %>
